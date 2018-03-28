@@ -15,8 +15,9 @@ public class GUI implements ActionListener {
         mainFrame.setPreferredSize(new Dimension(x,y));
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setResizable(false);
-
+        //Remake this with "dynmaic paint" google this
         mainFrame.setContentPane(new JPanel(){
+            //Paints the game board
             public void  paintComponent(Graphics g){
                 super.paintComponent(g);
                 setBackground(Color.blue);
@@ -37,7 +38,7 @@ public class GUI implements ActionListener {
 
 
         JButton [] ArrowButtons = new JButton[8];
-
+        //Creates 8 buttons
         for (int l = 0; l < 8; l++){
             ArrowButtons[l] = new JButton("↓");
             ArrowButtons[l].setBackground(Color.black);
@@ -51,9 +52,8 @@ public class GUI implements ActionListener {
                 @Override
                 public void  actionPerformed(ActionEvent e) {
                     System.out.println("test");
-                    //When this is pressed, check where it was and change one oval to filled.
-                    //Maybe redraw?
-
+                    //When this is pressed, check where it was clicked and change one oval to filled.
+                    //Maybe redraw? dont know how to do this yet, or just add an oval to
                 }
             });
         }
